@@ -1,6 +1,8 @@
 // DETECTAR SI ES MOVIL
 
-const isMobile = window.innerWidth <= 768;
+const videos = window.matchMedia("(max-width: 768px)").matches
+    ? document.querySelectorAll(".mobile-video")
+    : document.querySelectorAll(".desktop-video");
 
 // ELEGIR VIDEOS CORRECTOS
 
