@@ -1,7 +1,13 @@
 /* ========================= */
 /* RESET */
 /* ========================= */
-
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    overflow-x:hidden;
+}
 *{
     margin:0;
     padding:0;
@@ -25,15 +31,12 @@ img{
 /* ========================= */
 /* HERO */
 /* ========================= */
-
 .seccion-principal{
     position:relative;
-    width:100%;
+    width:100vw;
     height:100vh;
-    height:100svh;
     overflow:hidden;
 }
-
 .video-slider{
     position:absolute;
     inset:0;
