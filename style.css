@@ -1,403 +1,425 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-html, body {
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    background: black;
+html,body{
+
+width:100%;
+min-height:100%;
+
+overflow-x:hidden;
+
+font-family:Arial,sans-serif;
+
+background:black;
 }
 
+/* ========================= */
 /* HERO */
+/* ========================= */
 
-.seccion-principal {
+.seccion-principal{
 
-    position: relative;
+position:relative;
 
-    width: 100%;
+width:100%;
 
-    min-height: 100vh;
+min-height:100vh;
+min-height:100svh;
 
-    min-height: 100svh;
-
-    overflow: hidden;
-}
-/* VIDEO FULL SCREEN */
-.video-slider {
-    position: absolute;
-    inset: 0;
+overflow:hidden;
 }
 
-.video {
+/* VIDEO */
 
-    position:absolute;
+.video-slider{
 
-    inset:0;
+position:absolute;
 
-    width:100%;
+inset:0;
 
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center center;
-
-    opacity:0;
-
-    transition:opacity .8s ease;
+overflow:hidden;
 }
 
-.video.active {
-    opacity: 1;
+.video{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+object-position:center center;
+
+opacity:0;
+
+transition:opacity .8s ease;
 }
 
-/* OVERLAY SIMPLE */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
+.video.active{
+
+opacity:1;
+}
+
+/* OVERLAY */
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.25);
+
+z-index:1;
 }
 
 /* NAV */
 
-.navegacion {
+.navegacion{
 
-    position:absolute;
+position:absolute;
 
-    top:0;
+top:0;
+left:0;
 
-    left:0;
+width:100%;
 
-    width:100%;
+padding:25px;
 
-    padding:25px;
-
-    z-index:10;
+z-index:10;
 }
 
-.navegacion ul {
+.navegacion ul{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
+align-items:center;
 
-    align-items:center;
+gap:40px;
 
-    gap:40px;
+list-style:none;
 
-    list-style:none;
-
-    flex-wrap:wrap;
+flex-wrap:wrap;
 }
 
-.navegacion a {
+.navegacion a{
 
-    color:white;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-size:16px;
+font-size:16px;
+
+transition:.25s;
 }
 
-/* TEXTO */
-.contenido {
-    position: absolute;
-    z-index: 2;
+.navegacion a:hover{
 
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    color: white;
+opacity:.7;
 }
 
-.contenido h1 {
-    font-size: 60px;
-}
-
-.contenido p {
-    font-size: 18px;
-    color: #ccc;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-    .contenido h1 {
-        font-size: 35px;
-    }
-
-    .contenido p {
-        font-size: 14px;
-    }
-
-    .navegacion ul {
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-}
 /* ========================= */
 /* CONDICIONES */
 /* ========================= */
 
-.condiciones {
-    width: 100%;
+.condiciones{
 
-    background: #050505;
+width:100%;
 
-    padding: 80px 20px;
+background:#050505;
 
-    display: flex;
-    justify-content: center;
+padding:80px 20px;
+
+display:flex;
+
+justify-content:center;
 }
 
-.contenedor-condiciones img {
-    width: 95%;
-    max-width: 1400px;
+.contenedor-condiciones{
 
-    border-radius: 20px;
+width:100%;
 
-    object-fit: contain;
+display:flex;
 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+justify-content:center;
 }
 
-.contenedor-condiciones h2 {
-    color: white;
+.contenedor-condiciones img{
 
-    font-size: 38px;
+width:100%;
 
-    margin-bottom: 40px;
+max-width:1600px;
 
-    letter-spacing: 3px;
+border-radius:20px;
 
-    text-align: center;
+object-fit:contain;
+
+box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
 
-.contenedor-condiciones img {
-    width: 100%;
-    max-width: 1600px;
-}
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    .contenedor-condiciones img {
-        width: 100%;
-    }
-
-}
 /* ========================= */
-/* CATALOGO GRID PORTADAS */
+/* CATALOGO */
 /* ========================= */
 
-.catalogo {
-    background: #050505;
-    padding: 80px 20px;
+.catalogo{
+
+background:#050505;
+
+padding:80px 20px;
 }
 
-.titulo-catalogo {
-    text-align: center;
-    color: white;
-    font-size: 42px;
-    margin-bottom: 50px;
+.titulo-catalogo{
+
+text-align:center;
+
+color:white;
+
+font-size:42px;
+
+margin-bottom:50px;
 }
 
-/* GRID PRINCIPAL */
+/* GRID 2 2 2 */
 
-.grid-catalogo {
-    display: grid;
+.grid-catalogo{
 
-    grid-template-columns: repeat(2, 1fr);
+display:grid;
 
-    gap: 20px;
+grid-template-columns:repeat(2,1fr);
 
-    max-width: 1000px;
+gap:25px;
 
-    margin: auto;
+max-width:1200px;
+
+margin:auto;
 }
+
 /* PORTADAS */
 
-.portada {
-    width: 100%;
+.portada{
 
-    aspect-ratio: 16 / 10;
+width:100%;
 
-    object-fit: contain;
+aspect-ratio:16/10;
 
-    background: #111;
+object-fit:contain;
 
-    border-radius: 15px;
+background:#111;
 
-    cursor: pointer;
+border-radius:18px;
 
-    transition: 0.3s;
+cursor:pointer;
 
-    padding: 10px;
+padding:12px;
+
+transition:.3s;
 }
 
-.portada:hover {
-    transform: scale(1.04);
+.portada:hover{
+
+transform:scale(1.03);
 }
-
-/* RESPONSIVE */
-
-@media (max-width: 600px) {
-    .grid-catalogo {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ========================= */
-/* LIGHTBOX GRID 2x3 */
-/* ========================= */
 
 /* ========================= */
 /* LIGHTBOX */
 /* ========================= */
 
-.lightbox {
-    position: fixed;
-    inset: 0;
+.lightbox{
 
-    background: rgba(0,0,0,0.96);
+position:fixed;
 
-    display: none;
+inset:0;
 
-    justify-content: center;
-    align-items: center;
+background:rgba(0,0,0,.97);
 
-    z-index: 999;
+display:none;
 
-    padding: 40px;
+justify-content:center;
+align-items:center;
+
+padding:35px;
+
+z-index:9999;
 }
 
-.lightbox.active {
-    display: flex;
+.lightbox.active{
+
+display:flex;
 }
 
 /* IMAGEN */
 
-#lightbox-img {
-    max-width: 95%;
-    max-height: 90%;
+#lightbox-img{
 
-    object-fit: contain;
+max-width:95%;
 
-    border-radius: 15px;
+max-height:90vh;
+
+object-fit:contain;
+
+border-radius:18px;
 }
 
 /* BOTONES */
 
-.close {
-    position: absolute;
+.close{
 
-    top: 20px;
-    right: 30px;
+position:absolute;
 
-    font-size: 45px;
+top:20px;
+right:30px;
 
-    color: white;
+font-size:48px;
 
-    cursor: pointer;
+color:white;
 
-    z-index: 1000;
+cursor:pointer;
+
+z-index:10000;
 }
 
 .prev,
-.next {
-    position: absolute;
+.next{
 
-    top: 50%;
+position:absolute;
 
-    transform: translateY(-50%);
+top:50%;
 
-    background: rgba(255,255,255,0.1);
+transform:translateY(-50%);
 
-    border: none;
+width:65px;
+height:65px;
 
-    color: white;
+border:none;
 
-    font-size: 45px;
+border-radius:50%;
 
-    width: 60px;
-    height: 60px;
+background:rgba(255,255,255,.12);
 
-    border-radius: 50%;
+color:white;
 
-    cursor: pointer;
+font-size:42px;
 
-    transition: 0.3s;
+cursor:pointer;
+
+transition:.25s;
 }
 
 .prev:hover,
-.next:hover {
-    background: rgba(255,255,255,0.25);
+.next:hover{
+
+background:rgba(255,255,255,.25);
 }
 
-.prev {
-    left: 25px;
+.prev{
+
+left:25px;
 }
 
-.next {
-    right: 25px;
+.next{
+
+right:25px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:900px){
+
+.navegacion{
+
+padding:20px;
+}
+
+.navegacion ul{
+
+gap:20px;
+}
+
+.titulo-catalogo{
+
+font-size:34px;
+}
+
 }
 
 /* TABLET */
 
-@media (max-width:900px){
+@media (max-width:768px){
 
-    .navegacion{
+.seccion-principal{
 
-        padding:20px;
-    }
+min-height:100svh;
+}
 
-    .navegacion ul{
+.navegacion{
 
-        gap:20px;
-    }
+padding:18px;
+}
+
+.navegacion ul{
+
+gap:14px;
+}
+
+.navegacion a{
+
+font-size:14px;
+}
+
+/* catalogo */
+
+.grid-catalogo{
+
+gap:18px;
+}
+
+/* fullscreen */
+
+.lightbox{
+
+padding:15px;
+}
+
+#lightbox-img{
+
+max-width:100%;
+
+max-height:85vh;
+}
+
+.prev,
+.next{
+
+width:50px;
+height:50px;
+
+font-size:30px;
+}
+
+.close{
+
+font-size:40px;
+}
 
 }
 
-/* CELULAR */
+/* TELEFONOS */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
-    .seccion-principal{
+.grid-catalogo{
 
-        min-height:100svh;
-    }
-
-    .video{
-
-        object-position:center;
-    }
-
-    .navegacion{
-
-        padding:18px;
-    }
-
-    .navegacion ul{
-
-        gap:14px;
-    }
-
-    .navegacion a{
-
-        font-size:14px;
-    }
+grid-template-columns:1fr;
+}
 
 }
 
@@ -405,14 +427,24 @@ html, body {
 
 @media (max-width:480px){
 
-    .navegacion ul{
+.navegacion ul{
 
-        flex-direction:column;
-    }
+flex-direction:column;
+}
 
-    .navegacion a{
+.navegacion a{
 
-        font-size:13px;
-    }
+font-size:13px;
+}
+
+.prev{
+
+left:8px;
+}
+
+.next{
+
+right:8px;
+}
 
 }
