@@ -1,20 +1,34 @@
-const videos = document.querySelectorAll('.video');
+// DETECTAR SI ES MOVIL
+
+const isMobile = window.innerWidth <= 768;
+
+// ELEGIR VIDEOS CORRECTOS
+
+const videos = isMobile
+    ? document.querySelectorAll('.mobile-video')
+    : document.querySelectorAll('.desktop-video');
 
 let index = 0;
 
 function cambiarVideo() {
 
-    videos.forEach(v => {
-        v.classList.remove('active');
-        v.pause();
-        v.currentTime = 0;
+    videos.forEach(video => {
+
+        video.classList.remove('active');
+
+        video.pause();
+
+        video.currentTime = 0;
     });
 
     videos[index].classList.add('active');
+
     videos[index].play();
 
     videos[index].onended = () => {
+
         index = (index + 1) % videos.length;
+
         cambiarVideo();
     };
 }
