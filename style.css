@@ -1,5 +1,5 @@
 /* ========================= */
-/* PORTADA / HERO */
+/* HERO */
 /* ========================= */
 
 .seccion-principal{
@@ -8,24 +8,19 @@
 
     width:100%;
 
-    min-height:100vh;
-    min-height:100svh;
+    height:100vh;
 
     overflow:hidden;
 }
 
-/* VIDEO CONTAINER */
+/* VIDEO */
 
 .video-slider{
 
     position:absolute;
 
     inset:0;
-
-    overflow:hidden;
 }
-
-/* VIDEOS */
 
 .video{
 
@@ -88,9 +83,9 @@
 
     gap:40px;
 
-    list-style:none;
-
     flex-wrap:wrap;
+
+    list-style:none;
 }
 
 .navegacion a{
@@ -100,51 +95,27 @@
     text-decoration:none;
 
     font-size:16px;
-
-    transition:.25s;
-}
-
-.navegacion a:hover{
-
-    opacity:.75;
 }
 
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 
-/* TABLET */
-
-@media (max-width:900px){
-
-    .navegacion{
-
-        padding:20px;
-    }
-
-    .navegacion ul{
-
-        gap:20px;
-    }
-
-}
-
-/* CELULAR */
-
-@media (max-width:768px){
+@media(max-width:768px){
 
     .seccion-principal{
 
-        min-height:100svh;
+        height:100svh;
     }
-
-    /* CAMBIO IMPORTANTE */
 
     .video{
 
-        object-fit:contain;
+        width:100vw;
+        height:100svh;
 
-        background:black;
+        object-fit:cover;
+
+        object-position:center;
     }
 
     .navegacion{
@@ -164,20 +135,11 @@
 
 }
 
-/* TELEFONOS PEQUEÑOS */
-
-@media (max-width:480px){
+@media(max-width:480px){
 
     .navegacion ul{
 
         flex-direction:column;
-
-        gap:12px;
-    }
-
-    .navegacion a{
-
-        font-size:13px;
     }
 
 }
