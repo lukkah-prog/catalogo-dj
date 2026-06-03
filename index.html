@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukkah Sound</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PORTADA -->
+    <section class="seccion-principal">
+
+        <!-- VIDEOS FONDO -->
+        <div class="video-slider">
+
+            <video class="video active" muted playsinline>
+                <source src="imagenes/1.mp4" type="video/mp4">
+            </video>
+
+            <video class="video" muted playsinline>
+                <source src="imagenes/2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- OVERLAY OSCURO -->
+        <div class="overlay"></div>
+
+        <!-- NAVEGACION -->
+        <nav class="navegacion">
+
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+            </ul>
+
+        </nav>
+
+    </section>
+<!-- CONDICIONES -->
+
+<section class="condiciones">
+
+    <div class="contenedor-condiciones">
+
+
+
+        <img src="imagenes/condiciones.jpg" alt="condiciones">
+
+    </div>
+
+</section>
+<section class="catalogo">
+
+    <h2 class="titulo-catalogo">CATÁLOGO</h2>
+
+    <div class="grid-catalogo">
+
+        <!-- NORMAL SET -->
+        <img class="portada" data-set="normal"
+            src="imagenes/catalogos/normal-set/1.jpg">
+
+        <!-- NORMAL SET 2 -->
+        <img class="portada" data-set="normal2"
+            src="imagenes/catalogos/normal-set2/1.jpg">
+
+        <!-- BASIC -->
+        <img class="portada" data-set="basic"
+            src="imagenes/catalogos/basic-set/1.jpg">
+
+        <!-- PLUS -->
+        <img class="portada" data-set="plus"
+            src="imagenes/catalogos/plus-set/1.jpg">
+
+        <!-- PLUS 2 -->
+        <img class="portada" data-set="plus2"
+            src="imagenes/catalogos/plus-set2/1.jpg">
+
+        <!-- FULL -->
+        <img class="portada" data-set="full"
+            src="imagenes/catalogos/full-set/1.jpg">
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <span class="close">&times;</span>
+
+    <button class="prev">&#10094;</button>
+
+    <img id="lightbox-img">
+
+    <button class="next">&#10095;</button>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
