@@ -1,130 +1,186 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html,body{
-
-width:100%;
-min-height:100%;
-
-overflow-x:hidden;
-
-font-family:Arial,sans-serif;
-
-background:black;
-}
-
 /* ========================= */
-/* HERO */
+/* PORTADA / HERO */
 /* ========================= */
 
 .seccion-principal{
 
-position:relative;
+    position:relative;
 
-width:100%;
+    width:100%;
 
-min-height:100vh;
-min-height:100svh;
+    min-height:100vh;
+    min-height:100svh;
 
-overflow:hidden;
+    overflow:hidden;
 }
 
-/* VIDEO */
+/* VIDEO CONTAINER */
 
 .video-slider{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-overflow:hidden;
+    overflow:hidden;
 }
+
+/* VIDEOS */
 
 .video{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-width:100%;
-height:100%;
+    width:100%;
+    height:100%;
 
-object-fit:cover;
+    object-fit:cover;
 
-object-position:center center;
+    object-position:center center;
 
-opacity:0;
+    opacity:0;
 
-transition:opacity .8s ease;
+    transition:opacity .8s ease;
 }
 
 .video.active{
 
-opacity:1;
+    opacity:1;
 }
 
 /* OVERLAY */
 
 .overlay{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,.25);
 
-z-index:1;
+    z-index:1;
 }
 
 /* NAV */
 
 .navegacion{
 
-position:absolute;
+    position:absolute;
 
-top:0;
-left:0;
+    top:0;
+    left:0;
 
-width:100%;
+    width:100%;
 
-padding:25px;
+    padding:25px;
 
-z-index:10;
+    z-index:10;
 }
 
 .navegacion ul{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
-align-items:center;
+    justify-content:center;
+    align-items:center;
 
-gap:40px;
+    gap:40px;
 
-list-style:none;
+    list-style:none;
 
-flex-wrap:wrap;
+    flex-wrap:wrap;
 }
 
 .navegacion a{
 
-color:white;
+    color:white;
 
-text-decoration:none;
+    text-decoration:none;
 
-font-size:16px;
+    font-size:16px;
 
-transition:.25s;
+    transition:.25s;
 }
 
 .navegacion a:hover{
 
-opacity:.7;
+    opacity:.75;
 }
 
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+/* TABLET */
+
+@media (max-width:900px){
+
+    .navegacion{
+
+        padding:20px;
+    }
+
+    .navegacion ul{
+
+        gap:20px;
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width:768px){
+
+    .seccion-principal{
+
+        min-height:100svh;
+    }
+
+    /* CAMBIO IMPORTANTE */
+
+    .video{
+
+        object-fit:contain;
+
+        background:black;
+    }
+
+    .navegacion{
+
+        padding:18px;
+    }
+
+    .navegacion ul{
+
+        gap:14px;
+    }
+
+    .navegacion a{
+
+        font-size:14px;
+    }
+
+}
+
+/* TELEFONOS PEQUEÑOS */
+
+@media (max-width:480px){
+
+    .navegacion ul{
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    .navegacion a{
+
+        font-size:13px;
+    }
+
+}
 /* ========================= */
 /* CONDICIONES */
 /* ========================= */
