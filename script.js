@@ -57,34 +57,52 @@ botones.forEach(boton => {
 });
 const data = {
     normal: [
-        "imagenes/catalogos/normal-set/1.jpg",
-        "imagenes/catalogos/normal-set/2.jpg"
+        "catalogos/imagenes/normal-set/1.jpg",
+        "catalogos/imagenes/normal-set/2.jpg",
+        "catalogos/imagenes/normal-set/3.jpeg",
+        "catalogos/imagenes/normal-set/4.jpeg",
+        "catalogos/videos/normal-set/video1.mp4",
+        "catalogos/videos/normal-set/video2.mp4",
+        "catalogos/imagenes/normal-set/5.jpeg",
+        "catalogos/videos/normal-set/video3.mp4"
     ],
 
     normal2: [
-        "imagenes/catalogos/normal-set2/1.jpg",
-        "imagenes/catalogos/normal-set2/2.jpg"
+        "catalogos/imagenes/normal-set2/1.jpg",
+        "catalogos/imagenes/normal-set2/2.jpg",
+        "catalogos/videos/normal-set2/video1.mp4",
+        "catalogos/videos/normal-set2/video2.mp4"
     ],
 
     basic: [
-        "imagenes/catalogos/basic-set/1.jpg",
-        "imagenes/catalogos/basic-set/2.jpg",
-        "imagenes/catalogos/basic-set/3.jpg"
+        "catalogos/imagenes/basic-set/1.jpg",
+        "catalogos/imagenes/basic-set/2.jpg",
+        "catalogos/videos/basic-set/video1.mp4",
+        "catalogos/videos/basic-set/video2.mp4"
     ],
 
     plus: [
-        "imagenes/catalogos/plus-set/1.jpg",
-        "imagenes/catalogos/plus-set/2.jpg"
+        "catalogos/imagenes/plus-set/1.jpg",
+        "catalogos/imagenes/plus-set/2.jpg",
+        "catalogos/imagenes/plus-set/3.jpeg",
+        "catalogos/videos/plus-set/video1.mp4",
+        "catalogos/imagenes/plus-set/4.jpeg",
+        "catalogos/videos/plus-set/video2.mp4",
+        "catalogos/imagenes/plus-set/5.jpeg"
     ],
 
     plus2: [
-        "imagenes/catalogos/plus-set2/1.jpg",
-        "imagenes/catalogos/plus-set2/2.jpg"
+        "catalogos/imagenes/plus-set2/1.jpg",
+        "catalogos/imagenes/plus-set2/2.jpg",
+        "catalogos/imagenes/plus-set2/3.jpeg",
+        "catalogos/imagenes/plus-set2/4.jpeg",
+        "catalogos/imagenes/plus-set2/5.jpeg",
+        "catalogos/videos/plus-set2/video1.mp4"
     ],
 
     full: [
-        "imagenes/catalogos/full-set/1.jpg",
-        "imagenes/catalogos/full-set/2.jpg"
+        "catalogos/imagenes/full-set/1.jpg",
+        "catalogos/imagenes/full-set/2.jpg",
     ]
 };
 
@@ -116,8 +134,32 @@ document.querySelectorAll(".portada").forEach(img => {
 // actualizar imagen
 function updateImage() {
 
-    lightboxImg.src = currentSet[currentIndex];
+    const archivo = currentSet[currentIndex];
 
+    if (
+        archivo.endsWith(".mp4") ||
+        archivo.endsWith(".webm") ||
+        archivo.endsWith(".mov")
+    ) {
+
+        lightboxImg.style.display = "none";
+
+        lightboxVideo.style.display = "block";
+
+        lightboxVideo.src = archivo;
+
+        lightboxVideo.load();
+
+    } else {
+
+        lightboxVideo.pause();
+
+        lightboxVideo.style.display = "none";
+
+        lightboxImg.style.display = "block";
+
+        lightboxImg.src = archivo;
+    }
 }
 
 // siguiente
@@ -156,3 +198,4 @@ lightbox.addEventListener("click", (e) => {
     }
 
 });
+const lightboxVideo = document.getElementById("lightbox-video");
