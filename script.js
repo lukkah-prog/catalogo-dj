@@ -57,52 +57,52 @@ botones.forEach(boton => {
 });
 const data = {
     normal: [
-        "catalogos/imagenes/normal-set/1.jpg",
-        "catalogos/imagenes/normal-set/2.jpg",
-        "catalogos/imagenes/normal-set/3.jpeg",
-        "catalogos/imagenes/normal-set/4.jpeg",
-        "catalogos/videos/normal-set/video1.mp4",
-        "catalogos/videos/normal-set/video2.mp4",
-        "catalogos/imagenes/normal-set/5.jpeg",
-        "catalogos/videos/normal-set/video3.mp4"
+        "fotos/normal-set/1.jpg",
+        "fotos/normal-set/2.jpg",
+        "fotos/normal-set/3.jpeg",
+        "fotos/normal-set/4.jpeg",
+        "videos/normal-set/video1.mp4",
+        "videos/normal-set/video2.mp4",
+        "fotos/normal-set/5.jpeg",
+        "videos/normal-set/video3.mp4"
     ],
 
     normal2: [
-        "catalogos/imagenes/normal-set2/1.jpg",
-        "catalogos/imagenes/normal-set2/2.jpg",
-        "catalogos/videos/normal-set2/video1.mp4",
-        "catalogos/videos/normal-set2/video2.mp4"
+        "fotos/normal-set2/1.jpg",
+        "fotos/normal-set2/2.jpg",
+        "videos/normal-set2/video1.mp4",
+        "videos/normal-set2/video2.mp4"
     ],
 
     basic: [
-        "catalogos/imagenes/basic-set/1.jpg",
-        "catalogos/imagenes/basic-set/2.jpg",
-        "catalogos/videos/basic-set/video1.mp4",
-        "catalogos/videos/basic-set/video2.mp4"
+        "fotos/basic-set/1.jpg",
+        "fotos/basic-set/2.jpg",
+        "videos/basic-set/video1.mp4",
+        "videos/basic-set/video2.mp4"
     ],
 
     plus: [
-        "catalogos/imagenes/plus-set/1.jpg",
-        "catalogos/imagenes/plus-set/2.jpg",
-        "catalogos/imagenes/plus-set/3.jpeg",
-        "catalogos/videos/plus-set/video1.mp4",
-        "catalogos/imagenes/plus-set/4.jpeg",
-        "catalogos/videos/plus-set/video2.mp4",
-        "catalogos/imagenes/plus-set/5.jpeg"
+        "fotos/plus-set/1.jpg",
+        "fotos/plus-set/2.jpg",
+        "fotos/plus-set/3.jpeg",
+        "videos/plus-set/video1.mp4",
+        "fotos/plus-set/4.jpeg",
+        "videos/plus-set/video2.mp4",
+        "fotos/plus-set/5.jpeg"
     ],
 
     plus2: [
-        "catalogos/imagenes/plus-set2/1.jpg",
-        "catalogos/imagenes/plus-set2/2.jpg",
-        "catalogos/imagenes/plus-set2/3.jpeg",
-        "catalogos/imagenes/plus-set2/4.jpeg",
-        "catalogos/imagenes/plus-set2/5.jpeg",
-        "catalogos/videos/plus-set2/video1.mp4"
+        "fotos/plus-set2/1.jpg",
+        "fotos/plus-set2/2.jpg",
+        "fotos/plus-set2/3.jpeg",
+        "fotos/plus-set2/4.jpeg",
+        "fotos/plus-set2/5.jpeg",
+        "videos/plus-set2/video1.mp4"
     ],
 
     full: [
-        "catalogos/imagenes/full-set/1.jpg",
-        "catalogos/imagenes/full-set/2.jpg",
+        "fotos/full-set/1.jpg",
+        "fotos/full-set/2.jpg",
     ]
 };
 
