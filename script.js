@@ -1,8 +1,9 @@
-// DETECTAR SI ES MOVIL
+
+// =========================
+// DETECTAR MÓVIL + VIDEO HERO
+// =========================
 
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-// ELEGIR VIDEOS CORRECTOS
 
 const videos = isMobile
     ? document.querySelectorAll(".mobile-video")
@@ -13,48 +14,27 @@ let index = 0;
 function cambiarVideo() {
 
     videos.forEach(video => {
-
-        video.classList.remove('active');
-
+        video.classList.remove("active");
         video.pause();
-
         video.currentTime = 0;
     });
 
-    videos[index].classList.add('active');
-
+    videos[index].classList.add("active");
     videos[index].play();
 
     videos[index].onended = () => {
-
         index = (index + 1) % videos.length;
-
         cambiarVideo();
     };
 }
 
 cambiarVideo();
-const botones = document.querySelectorAll('.btn-toggle');
 
-botones.forEach(boton => {
 
-    boton.addEventListener('click', () => {
+// =========================
+// DATA CATALOGO
+// =========================
 
-        const galeria = boton
-            .closest('.card-set')
-            .querySelector('.galeria-set');
-
-        galeria.classList.toggle('active');
-
-        if(galeria.classList.contains('active')){
-            boton.textContent = 'Cerrar';
-        } else {
-            boton.textContent = 'Ver Set';
-        }
-
-    });
-
-});
 const data = {
     normal: [
         "fotos/normal-set/1.jpg",
@@ -103,99 +83,118 @@ const data = {
     full: [
         "fotos/full-set/1.jpg",
         "fotos/full-set/2.jpg",
+        "videos/full-set/video1.mp4",
+        "videos/full-set/video2.mp4",
     ]
 };
 
+// =========================
+// LIGHTBOX ELEMENTOS
+// =========================
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+const lightboxVideo = document.getElementById("lightbox-video");
+const whatsappBtn = document.getElementById("lightbox-whatsapp");
 
 let currentSet = [];
 let currentIndex = 0;
+let currentSetName = "";
 
-// abrir portada
+
+// =========================
+// ABRIR CATALOGO
+// =========================
+
 document.querySelectorAll(".portada").forEach(img => {
-
     img.addEventListener("click", () => {
 
-        const setName = img.dataset.set;
-
-        currentSet = data[setName];
-
+        currentSetName = img.dataset.set;
+        currentSet = data[currentSetName];
         currentIndex = 0;
 
-        updateImage();
-
+        updateMedia();
         lightbox.classList.add("active");
 
+        whatsappBtn.style.display = "inline-block";
     });
-
 });
 
-// actualizar imagen
-function updateImage() {
+
+// =========================
+// ACTUALIZAR MEDIA
+// =========================
+
+function updateMedia() {
 
     const archivo = currentSet[currentIndex];
 
-    if (
-        archivo.endsWith(".mp4") ||
-        archivo.endsWith(".webm") ||
-        archivo.endsWith(".mov")
-    ) {
+    if (archivo.endsWith(".mp4")) {
 
         lightboxImg.style.display = "none";
-
         lightboxVideo.style.display = "block";
-
         lightboxVideo.src = archivo;
-
         lightboxVideo.load();
 
     } else {
 
         lightboxVideo.pause();
-
         lightboxVideo.style.display = "none";
-
         lightboxImg.style.display = "block";
-
         lightboxImg.src = archivo;
     }
+
+    // =========================
+    // LINK WHATSAPP POR SET
+    // =========================
+
+    const nombres = {
+        normal: "Normal Set",
+        normal2: "Normal Set 2",
+        basic: "Basic Set",
+        plus: "Plus Set",
+        plus2: "Plus Set 2",
+        full: "Full Set"
+    };
+
+    const nombre = nombres[currentSetName] || "Set";
+
+    whatsappBtn.href =
+        `https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20${nombre}`;
 }
 
-// siguiente
+
+// =========================
+// NEXT / PREV
+// =========================
+
 document.querySelector(".next").onclick = () => {
-
     currentIndex = (currentIndex + 1) % currentSet.length;
-
-    updateImage();
-
+    updateMedia();
 };
 
-// anterior
 document.querySelector(".prev").onclick = () => {
-
-    currentIndex =
-        (currentIndex - 1 + currentSet.length) % currentSet.length;
-
-    updateImage();
-
+    currentIndex = (currentIndex - 1 + currentSet.length) % currentSet.length;
+    updateMedia();
 };
 
-// cerrar
+
+// =========================
+// CERRAR LIGHTBOX
+// =========================
+
 document.querySelector(".close").onclick = () => {
-
     lightbox.classList.remove("active");
-
+    lightboxVideo.pause();
+    whatsappBtn.style.display = "none";
 };
+
 
 // click fuera
 lightbox.addEventListener("click", (e) => {
-
     if (e.target === lightbox) {
-
         lightbox.classList.remove("active");
-
+        lightboxVideo.pause();
+        whatsappBtn.style.display = "none";
     }
-
 });
-const lightboxVideo = document.getElementById("lightbox-video");
