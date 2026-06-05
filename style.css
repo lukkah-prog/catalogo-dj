@@ -55,16 +55,10 @@ img {
     opacity: 1;
 }
 
-.desktop-video {
-    display: block;
-}
-
-.mobile-video {
-    display: none;
-}
+.desktop-video { display: block; }
+.mobile-video { display: none; }
 
 /* OVERLAY */
-
 .overlay {
     position: absolute;
     inset: 0;
@@ -126,7 +120,6 @@ img {
     width: 100%;
     max-width: 1600px;
     border-radius: 20px;
-    object-fit: contain;
     box-shadow: 0 10px 40px rgba(0,0,0,.5);
 }
 
@@ -142,7 +135,6 @@ img {
 
 .titulo-catalogo h2 {
     font-size: 42px;
-    margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
@@ -169,8 +161,6 @@ img {
     align-items: center;
 }
 
-/* PORTADAS */
-
 .portada {
     width: 100%;
     aspect-ratio: 16/10;
@@ -184,6 +174,30 @@ img {
 
 .portada:hover {
     transform: scale(1.03);
+}
+
+/* BOTÓN CATÁLOGO WHATSAPP */
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 12px;
+
+    background: #25D366;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    background: #1fb655;
 }
 
 /* ========================= */
@@ -205,8 +219,6 @@ img {
     display: flex;
 }
 
-/* IMAGEN / VIDEO */
-
 #lightbox-img,
 #lightbox-video {
     max-width: 95%;
@@ -214,8 +226,39 @@ img {
     border-radius: 18px;
 }
 
-/* CERRAR */
+/* BOTÓN WHATSAPP LIGHTBOX */
+.lightbox-wa {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 
+    background: #25D366;
+    color: white;
+
+    padding: 12px 22px;
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    z-index: 10001;
+
+    display: none;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+
+    transition: 0.2s;
+}
+
+.lightbox-wa:hover {
+    background: #1fb655;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* CERRAR */
 .close {
     position: absolute;
     top: 20px;
@@ -227,7 +270,6 @@ img {
 }
 
 /* FLECHAS */
-
 .prev,
 .next {
     position: absolute;
@@ -241,12 +283,6 @@ img {
     color: white;
     font-size: 42px;
     cursor: pointer;
-    transition: .25s;
-}
-
-.prev:hover,
-.next:hover {
-    background: rgba(255,255,255,.25);
 }
 
 .prev { left: 25px; }
@@ -281,14 +317,15 @@ img {
     line-height: 1.6;
 }
 
-.footer-redes{
+.footer-redes {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin: 35px 0;
+    flex-wrap: wrap;
 }
 
-.footer-redes a{
+.footer-redes a {
     width: 50px;
     height: 50px;
 
@@ -308,30 +345,25 @@ img {
     transition: 0.3s;
 }
 
-/* HOVER GENERAL */
-.footer-redes a:hover{
+.footer-redes a:hover {
     transform: translateY(-4px) scale(1.1);
 }
 
-/* COLORES POR RED */
-.footer-redes a.wa:hover{
-    background: #25D366;
-}
-
-.footer-redes a.ig:hover{
-    background: #E1306C;
-}
-
-.footer-redes a.fb:hover{
-    background: #1877F2;
-}
-
-.footer-redes a.tt:hover{
-    background: #000000;
-}
+.footer-redes a.wa:hover { background: #25D366; }
+.footer-redes a.ig:hover { background: #E1306C; }
+.footer-redes a.fb:hover { background: #1877F2; }
+.footer-redes a.tt:hover { background: #000; }
 
 .footer-info {
     margin-top: 20px;
+}
+
+/* CRÉDITO */
+.footer-credito {
+    margin-top: 25px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    text-align: center;
 }
 
 /* ========================= */
@@ -367,6 +399,14 @@ img {
     .close {
         font-size: 40px;
     }
+
+    .footer h2 {
+        font-size: 28px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
 }
 
 @media (max-width:600px) {
@@ -379,70 +419,4 @@ img {
     .navegacion ul {
         flex-direction: column;
     }
-}
-.lightbox-wa{
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background: #25D366;
-    color: white;
-
-    padding: 12px 22px;
-    border-radius: 50px;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    text-decoration: none;
-
-    z-index: 10001;
-
-    display: none;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,.3);
-
-    transition: 0.2s;
-}
-
-.lightbox-wa:hover{
-    background: #1fb655;
-    transform: translateX(-50%) scale(1.05);
-}
-.btn-whatsapp{
-    display: inline-block;
-    margin-top: 10px;
-
-    background: #25D366;
-    color: white;
-
-    text-decoration: none;
-
-    padding: 10px 18px;
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn-whatsapp:hover{
-    transform: scale(1.05);
-}
-.footer-credito{
-    margin-top: 25px;
-
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-
-    letter-spacing: 1px;
-
-    text-align: center;
-}
-
-.footer-credito:hover{
-    color: rgba(255,255,255,0.6);
-    transition: 0.3s;
 }
