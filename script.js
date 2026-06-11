@@ -132,6 +132,10 @@ function updateMedia() {
     if (archivo.endsWith(".mp4")) {
 
         lightboxImg.style.display = "none";
+        if (!archivo.endsWith(".mp4")) {
+    lightboxVideo.pause();
+    lightboxVideo.currentTime = 0;
+}
         lightboxVideo.style.display = "block";
         lightboxVideo.src = archivo;
         lightboxVideo.load();
@@ -184,6 +188,11 @@ document.querySelector(".prev").onclick = () => {
 // =========================
 
 document.querySelector(".close").onclick = () => {
+    // reset completo al cerrar
+lightboxVideo.pause();
+lightboxVideo.currentTime = 0;
+lightboxImg.src = "";
+lightboxVideo.src = "";
     lightbox.classList.remove("active");
     lightboxVideo.pause();
     whatsappBtn.style.display = "none";
@@ -198,3 +207,53 @@ lightbox.addEventListener("click", (e) => {
         whatsappBtn.style.display = "none";
     }
 });
+// =========================
+// EXPERIENCIA EVENTO - VIDEO CONTROL
+// =========================
+
+const videoExperiencia = document.querySelector(".video-experiencia video");
+
+if (videoExperiencia) {
+    videoExperiencia.muted = false; // podés cambiar a true si querés autoplay silencioso
+    videoExperiencia.playsInline = true;
+}
+const expImgs = document.querySelectorAll(".exp-img");
+const lightboxExp = document.getElementById("lightbox-exp");
+const imgExp = document.getElementById("img-exp");
+
+let expIndex = 0;
+let expArray = [];
+
+expImgs.forEach((img, i) => {
+    expArray.push(img.src);
+
+    img.addEventListener("click", () => {
+        expIndex = i;
+        openExp();
+    });
+});
+
+function openExp(){
+    imgExp.src = expArray[expIndex];
+    lightboxExp.classList.add("active");
+}
+
+document.querySelector(".close-exp").onclick = () => {
+    lightboxExp.classList.remove("active");
+};
+
+document.querySelector(".next-exp").onclick = () => {
+    expIndex = (expIndex + 1) % expArray.length;
+    openExp();
+};
+
+document.querySelector(".prev-exp").onclick = () => {
+    expIndex = (expIndex - 1 + expArray.length) % expArray.length;
+    openExp();
+};
+
+lightboxExp.addEventListener("click", (e) => {
+    if(e.target === lightboxExp){
+        lightboxExp.classList.remove("active");
+    }
+}); 
