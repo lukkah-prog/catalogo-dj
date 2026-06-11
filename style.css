@@ -454,6 +454,12 @@ img {
     font-size: 15px;
     padding: 16px;
 }
+.galeria-experiencia{
+    grid-template-columns: repeat(2, 1fr);
+}
+.galeria-experiencia img{
+    height:140px;
+}
 }
 
 @media (max-width:600px) {
@@ -468,10 +474,6 @@ img {
     }
 .experiencia-evento h2{
     font-size: 28px;
-}
-
-.galeria-experiencia{
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .galeria-experiencia img{
@@ -515,7 +517,7 @@ img {
 .galeria-experiencia{
     margin-top:30px;
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
 
