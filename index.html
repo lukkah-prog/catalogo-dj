@@ -4,323 +4,737 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukkah Sound</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C390KF9Q6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-9C390KF9Q6');
-</script>
+    <title>Lukkah Sound</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-9C390KF9Q6"
+    ></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", "G-9C390KF9Q6");
+    </script>
 </head>
 
 <body>
 
     <!-- PORTADA -->
-    <section class="seccion-principal">
+    <section class="seccion-principal" id="inicio">
 
-        <!-- VIDEOS FONDO -->
-<div class="video-slider">
+        <!-- VIDEOS DE FONDO -->
+        <div class="video-slider">
 
-    <!-- DESKTOP -->
-    <video class="video desktop-video active" muted playsinline>
-        <source src="imagenes/1-desktop.mp4" type="video/mp4">
-    </video>
+            <!-- Videos para computadora -->
+            <video class="video desktop-video active" muted playsinline>
+                <source src="imagenes/1-desktop.mp4" type="video/mp4">
+            </video>
 
-    <video class="video desktop-video" muted playsinline>
-        <source src="imagenes/2-desktop.mp4" type="video/mp4">
-    </video>
+            <video class="video desktop-video" muted playsinline>
+                <source src="imagenes/2-desktop.mp4" type="video/mp4">
+            </video>
 
-    <!-- MOBILE -->
-    <video class="video mobile-video active" muted playsinline>
-        <source src="imagenes/1-mobile.mp4" type="video/mp4">
-    </video>
+            <!-- Videos para celular -->
+            <video class="video mobile-video active" muted playsinline>
+                <source src="imagenes/1-mobile.mp4" type="video/mp4">
+            </video>
 
-    <video class="video mobile-video" muted playsinline>
-        <source src="imagenes/2-mobile.mp4" type="video/mp4">
-    </video>
+            <video class="video mobile-video" muted playsinline>
+                <source src="imagenes/2-mobile.mp4" type="video/mp4">
+            </video>
 
-</div>
+        </div>
 
-        <!-- OVERLAY OSCURO -->
+        <!-- CAPA OSCURA -->
         <div class="overlay"></div>
 
-        <!-- NAVEGACION -->
-        <nav class="navegacion">
-
-            <ul>
-                <li><a href="#">Deslizá Hacia Abajo Para Ver Más</a></li>
-            </ul>
-
+        <!-- NAVEGACIÓN -->
+        <nav class="navegacion" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#experiencia">Experiencias</a></li>
+                         <li><a href="#montajes">Montajes</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#condiciones">Condiciones</a></li>
+                        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
         </nav>
 
     </section>
-<!-- CONDICIONES -->
 
-<section class="condiciones">
+    <!-- EXPERIENCIA EN EVENTOS -->
+    <section class="experiencia-evento" id="experiencia">
 
-    <video class="condiciones-video" autoplay muted loop playsinline>
-        <source src="videos/fondostar.mp4" type="video/mp4">
-    </video>
+        <video class="fondo-estrellas" autoplay muted loop playsinline>
+            <source src="videos/fondostar.mp4" type="video/mp4">
+        </video>
 
-    <div class="condiciones-overlay"></div>
+        <div class="overlay-estrellas"></div>
 
-    <div class="contenedor-condiciones">
+        <div class="experiencia-contenido">
 
-        <h2>CONDICIONES DEL SERVICIO</h2>
+            <h2>ASÍ ES UN EVENTO CON LUKKAH SOUND</h2>
 
-        <div class="condicion-item">
-            TODOS LOS SETS PUEDEN SER MODIFICADOS A NECESIDAD DEL CLIENTE, CON UN COSTO EXTRA.
+            <p>
+                No solo llevamos equipos, creamos experiencias completas
+                con sonido, luces y energía en vivo.
+            </p>
+
+            <!-- VIDEO REAL -->
+<!-- VIDEOS DE EXPERIENCIAS -->
+<div class="eventos-grid">
+
+    <!-- EVENTO 1 -->
+    <article class="evento-card" data-evento="evento1">
+        <h3>XV</h3>
+
+        <div class="evento-visor">
+            <video
+                class="evento-video"
+                controls
+                playsinline
+                preload="metadata"
+                aria-label="Videos del evento 1"
+            ></video>
         </div>
 
-        <div class="condicion-item">
-            LAS HORAS DE SERVICIO PUEDEN VARIAR SEGÚN LA NECESIDAD DEL CLIENTE.
+        <div class="evento-controles">
+            <button class="evento-anterior" type="button"
+                    aria-label="Video anterior del evento 1">
+                &#10094;
+            </button>
+
+            <span class="evento-contador" aria-live="polite"></span>
+
+            <button class="evento-siguiente" type="button"
+                    aria-label="Video siguiente del evento 1">
+                &#10095;
+            </button>
+        </div>
+    </article>
+
+    <!-- EVENTO 2 -->
+    <article class="evento-card" data-evento="evento2">
+        <h3>Dia de la Juventud</h3>
+
+        <div class="evento-visor">
+            <video
+                class="evento-video"
+                controls
+                playsinline
+                preload="metadata"
+                aria-label="Videos del evento 2"
+            ></video>
         </div>
 
-        <div class="condicion-item">
-            TODOS LOS SETS INCLUYEN DJ PARA LA TOTALIDAD DE LA NOCHE.
+        <div class="evento-controles">
+            <button class="evento-anterior" type="button"
+                    aria-label="Video anterior del evento 2">
+                &#10094;
+            </button>
+
+            <span class="evento-contador" aria-live="polite"></span>
+
+            <button class="evento-siguiente" type="button"
+                    aria-label="Video siguiente del evento 2">
+                &#10095;
+            </button>
+        </div>
+    </article>
+
+    <!-- EVENTO 3 -->
+    <article class="evento-card" data-evento="evento3">
+        <h3>XV</h3>
+
+        <div class="evento-visor">
+            <video
+                class="evento-video"
+                controls
+                playsinline
+                preload="metadata"
+                aria-label="Videos del evento 3"
+            ></video>
         </div>
 
-        <div class="condicion-item">
-            LA RESERVA DEL EVENTO SE CONFIRMA ÚNICAMENTE CON UNA SEÑA PREVIA DEL 25% DEL COSTO TOTAL.
+        <div class="evento-controles">
+            <button class="evento-anterior" type="button"
+                    aria-label="Video anterior del evento 3">
+                &#10094;
+            </button>
+
+            <span class="evento-contador" aria-live="polite"></span>
+
+            <button class="evento-siguiente" type="button"
+                    aria-label="Video siguiente del evento 3">
+                &#10095;
+            </button>
+        </div>
+    </article>
+
+    <!-- EVENTO 4 -->
+    <article class="evento-card" data-evento="evento4">
+        <h3>XV</h3>
+
+        <div class="evento-visor">
+            <video
+                class="evento-video"
+                controls
+                playsinline
+                preload="metadata"
+                aria-label="Videos del evento 4"
+            ></video>
         </div>
 
-        <div class="condicion-item">
-            EL RESTO DEL PAGO SE ENTREGA ANTES DE INICIAR EL EVENTO.
+        <div class="evento-controles">
+            <button class="evento-anterior" type="button"
+                    aria-label="Video anterior del evento 4">
+                &#10094;
+            </button>
+
+            <span class="evento-contador" aria-live="polite"></span>
+
+            <button class="evento-siguiente" type="button"
+                    aria-label="Video siguiente del evento 4">
+                &#10095;
+            </button>
         </div>
-
-        <div class="condicion-item">
-            EL SERVICIO INCLUYE TRANSPORTE, MONTAJE, DESMONTAJE Y RETIRO DE LOS EQUIPOS.
-        </div>
-
-        <div class="condicion-item">
-            EN CASO DE CANCELACIÓN DEL EVENTO, LA SEÑA NO SERÁ REEMBOLSABLE.
-        </div>
-
-    </div>
-
-</section>
-
-</section>
-<!-- EXPERIENCIA EVENTO -->
-<section class="experiencia-evento">
-    <video class="fondo-estrellas" autoplay muted loop playsinline>
-        <source src="videos/fondostar.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay-estrellas"></div>
-    <div class="experiencia-contenido">
-
-        <h2>Así es un evento con nosotros</h2>
-
-        <p>
-            No solo llevamos equipos, creamos experiencias completas con sonido, luces y energía en vivo.
-        </p>
-
-        <!-- VIDEO REAL -->
-        <div class="video-experiencia">
-            <video controls>
-                <source src="videos/plus-set/video1.mp4" type="video/mp4">
-                Tu navegador no soporta video.
-            </video>
-        </div>
-
-        <!-- GALERÍA REAL -->
-<div class="galeria-experiencia">
-
-    <img src="fotos/plus-set/3.jpeg" class="exp-img">
-    <img src="fotos/plus-set2/3.jpeg" class="exp-img">
-    <img src="fotos/normal-set/3.jpeg" class="exp-img">
-    <img src="fotos/plus-set2/5.jpeg" class="exp-img">
+    </article>
 
 </div>
-        <!-- FRASE IMPACTO -->
-        <div class="frase-experiencia">
-            <h2>Transformamos cualquier lugar en una fiesta inolvidable</h2>
+            <!-- FRASE DE IMPACTO -->
+            <div class="frase-experiencia">
+                <h2>TRANSFORMAMOS CUALQUIER LUGAR EN UNA FESTA INOLVIDABLE</h2>
+            </div>
+
         </div>
+
     </section>
-    
-<section class="catalogo-seccion">
+<!-- MONTAJES -->
+<section class="montajes-seccion" id="montajes">
 
-    <video class="catalogo-video" autoplay muted loop playsinline>
-        <source src="videos/fondostar.mp4" type="video/mp4">
-    </video>
+    <div class="montajes-contenido">
 
-    <div class="catalogo-overlay"></div>
+        <h2>ALGUNOS DE NUESTROS <span>MONTAJES</span></h2>
 
-    <div class="catalogo-contenido">
+        <p class="montajes-descripcion">
+            Cada evento tiene su estilo. Descubrí algunas de nuestras
+            propuestas de sonido e iluminación.
+        </p>
 
-        <div class="titulo-catalogo">
-            <h2>NUESTRO CATÁLOGO</h2>
-            <p>Haz clic en las imágenes para ver fotografías, videos y más detalles.</p>
+<div class="montajes-carrusel">
+
+    <button class="montajes-anterior" type="button"
+            aria-label="Montaje anterior">
+        &#10094;
+    </button>
+
+<div class="montajes-pista" aria-label="Fotografías de montajes">
+
+    <button class="montaje-foto" type="button"
+            aria-label="Ampliar montaje 1">
+        <img
+            src="fotos/plus-set/3.jpeg"
+            alt="Montaje de sonido e iluminación Plus Set"
+            loading="lazy"
+        >
+    </button>
+    <button class="montaje-foto" type="button"
+            aria-label="Ampliar montaje 4">
+        <img
+            src="fotos/plus-set/6.PNG"
+            alt="Otra vista del montaje Plus Set"
+            loading="lazy"
+        >
+    </button>
+    <button class="montaje-foto" type="button"
+            aria-label="Ampliar montaje 2">
+        <img
+            src="fotos/plus-set2/3.jpeg"
+            alt="Montaje de sonido e iluminación Plus Set 2"
+            loading="lazy"
+        >
+    </button>
+
+    <button class="montaje-foto" type="button"
+            aria-label="Ampliar montaje 3">
+        <img
+            src="fotos/basic-set/6.jpeg"
+            alt="Montaje de sonido e iluminación Basic Set"
+            loading="lazy"
+        >
+    </button>
+
+    <button class="montaje-foto" type="button"
+            aria-label="Ampliar montaje 5">
+        <img
+            src="fotos/basic-set/7.jpeg"
+            alt="Otra vista del montaje Basic Set"
+            loading="lazy"
+        >
+    </button>
+
+</div>
+
+    <button class="montajes-siguiente" type="button"
+            aria-label="Montaje siguiente">
+        &#10095;
+    </button>
+
+</div>
+
+<p class="montajes-ayuda">
+    Deslizá para ver más montajes. Tocá una foto para ampliarla.
+</p>
+<!-- VISOR DE MONTAJES -->
+<dialog class="montajes-modal" id="montajes-modal"
+        aria-label="Fotografías ampliadas de montajes">
+
+    <div class="montajes-modal-contenido">
+
+        <button class="montajes-cerrar" type="button"
+                aria-label="Cerrar fotografía">
+            &times;
+        </button>
+
+        <button class="montajes-modal-anterior" type="button"
+                aria-label="Fotografía anterior">
+            &#10094;
+        </button>
+
+        <img class="montajes-modal-img" alt="">
+
+        <button class="montajes-modal-siguiente" type="button"
+                aria-label="Fotografía siguiente">
+            &#10095;
+        </button>
+
+        <span class="montajes-modal-contador" aria-live="polite"></span>
+
+    </div>
+
+</dialog>
+        <div class="montajes-invitacion">
+
+            <h3>Encontrá el montaje ideal para tu evento</h3>
+
+            <p>
+                Visitá nuestro catálogo, elegí el que más te guste
+                y consultanos para adaptarlo a tu celebración.
+            </p>
+
+            <a href="#catalogo" class="montajes-boton">
+                Explorar el catálogo
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+
         </div>
 
-        <div class="grid-catalogo">
-
-            <!-- NORMAL -->
-            <div class="item-catalogo">
-        <img class="portada" data-set="normal"
-             src="fotos/normal-set/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Normal%20Set,%20m%C3%A1s%20info."
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
     </div>
-
-    <!-- NORMAL 2 -->
-    <div class="item-catalogo">
-        <img class="portada" data-set="normal2"
-             src="fotos/normal-set2/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Normal%20Set%202,%20m%C3%A1s%20info"
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
-    </div>
-
-    <!-- BASIC -->
-    <div class="item-catalogo">
-        <img class="portada" data-set="basic"
-             src="fotos/basic-set/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Basic%20Set,%20m%C3%A1s%20info."
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
-    </div>
-
-    <!-- PLUS -->
-    <div class="item-catalogo">
-        <img class="portada" data-set="plus"
-             src="fotos/plus-set/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Plus%20Set,%20m%C3%A1s%20info."
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
-    </div>
-
-    <!-- PLUS 2 -->
-    <div class="item-catalogo">
-        <img class="portada" data-set="plus2"
-             src="fotos/plus-set2/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Plus%20Set%202,%20m%C3%A1s%20info."
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
-    </div>
-
-    <!-- FULL -->
-    <div class="item-catalogo">
-        <img class="portada" data-set="full"
-             src="fotos/full-set/1.jpg">
-
-        <a class="btn-whatsapp"
-           href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Full%20Set,%20m%C3%A1s%20info."
-           target="_blank">
-           Consultar por WhatsApp
-        </a>
-</div> <!-- grid-catalogo -->
-
-</div> <!-- catalogo-contenido -->
 
 </section>
 
-<!-- LIGHTBOX -->
+    <!-- CATÁLOGO -->
+    <section class="catalogo-seccion" id="catalogo">
 
-<div class="lightbox" id="lightbox">
+        <video class="catalogo-video" autoplay muted loop playsinline>
+            <source src="videos/fondostar.mp4" type="video/mp4">
+        </video>
 
-    <span class="close">&times;</span>
+        <div class="catalogo-overlay"></div>
 
-    <button class="prev">&#10094;</button>
+        <div class="catalogo-contenido">
 
-    <img id="lightbox-img">
+            <div class="titulo-catalogo">
 
-    <video id="lightbox-video" controls style="display:none;"></video>
+                <h2>VISITÁ NUESTRO CATÁLOGO</h2>
 
-    <button class="next">&#10095;</button>
+                <p>
+                    Hacé clic en las imágenes para ver fotografías,
+                    videos y más detalles.
+                </p>
 
-    <!-- BOTÓN WHATSAPP DINÁMICO -->
-    <a id="lightbox-whatsapp" class="lightbox-wa" target="_blank">
-        Consultar por WhatsApp
-    </a>
+            </div>
 
-</div>
-<div class="lightbox-exp" id="lightbox-exp">
+            <div class="grid-catalogo">
 
-    <span class="close-exp">&times;</span>
+                <!-- NORMAL SET -->
+                <div class="item-catalogo">
 
-    <button class="prev-exp">&#10094;</button>
+                    <img
+                        class="portada"
+                        data-set="normal"
+                        src="fotos/normal-set/1.jpg"
+                        alt="Ver fotografías y videos del Normal Set"
+                    >
 
-    <img id="img-exp">
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Normal%20Set,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
 
-    <button class="next-exp">&#10095;</button>
+                </div>
 
-</div>
-    <script src="script.js"></script>
-    <footer class="footer">
 
-    <div class="footer-contenido">
+                <!-- NORMAL SET 2 -->
+                <div class="item-catalogo">
 
-        <h2>LUKKAH SOUND</h2>
+                    <img
+                        class="portada"
+                        data-set="normal2"
+                        src="fotos/normal-set2/1.jpg"
+                        alt="Ver fotografías y videos del Normal Set 2"
+                    >
 
-        <p>
-            Sonido • Iluminación • DJ Profesional
-        </p>
-         <p>
-            Estás a un click de visitar nuestras redes sociales y contactarnos para tu próximo evento. ¡Haz clic en los íconos a continuación!
-        </p>
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Normal%20Set%202,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
 
-       <div class="footer-redes">
+                </div>
 
-    <a href="https://wa.me/595994485841?text=Hola%20Lukkah,%20me%20gustaria%20un%20presupuesto%20acorde%20a%20mi%20evento:%0A%0A-%20Tipo%20de%20evento:%0A-%20Fecha%20y%20hora%20del%20evento:%0A-%20Ciudad%20donde%20se%20realizara:%0A-%20El%20lugar%20sera%20abierto%20o%20cerrado:%0A-%20Cantidad%20estimada%20de%20personas:"
-       target="_blank" class="icon wa">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
-    <a href="https://instagram.com/lukkahsound"
-       target="_blank" class="icon ig">
-        <i class="fab fa-instagram"></i>
-    </a>
+                <!-- BASIC SET -->
+                <div class="item-catalogo">
 
-    <a href="https://facebook.com/lucas.gonzalez.680047"
-       target="_blank" class="icon fb">
-        <i class="fab fa-facebook-f"></i>
-    </a>
+                    <img
+                        class="portada"
+                        data-set="basic"
+                        src="fotos/basic-set/1.jpg"
+                        alt="Ver fotografías y videos del Basic Set"
+                    >
 
-    <a href="https://tiktok.com/@lukkahdj"
-       target="_blank" class="icon tt">
-        <i class="fab fa-tiktok"></i>
-    </a>
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Basic%20Set,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
 
-</div>
-        <div class="footer-info">
+                </div>
 
-            <p>📍 Asunción, Paraguay</p>
 
-          <p> 📞 <a href="tel:+595994485841">+595 994 485 841</a></p>
+                <!-- PLUS SET -->
+                <div class="item-catalogo">
 
- <p><a href="mailto:lukkahsound@gmail.com?subject=Presupuesto%20para%20evento&body=Hola%20Lukkah,%20me%20gustaría%20un%20presupuesto%20acorde%20a%20mi%20evento:%0A%0A-%20Tipo%20de%20evento:%0A-%20Fecha%20y%20hora%20del%20evento:%0A-%20Ciudad:%0A-%20Lugar:%0A-%20Cantidad%20de%20personas:">
-    ✉️ lukkahsound@gmail.com
-</a></p>
-            <p>Disponible para eventos sociales y corporativos</p>
+                    <img
+                        class="portada"
+                        data-set="plus"
+                        src="fotos/plus-set/1.jpg"
+                        alt="Ver fotografías y videos del Plus Set"
+                    >
+
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Plus%20Set,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
+
+                </div>
+
+
+                <!-- PLUS SET 2 -->
+                <div class="item-catalogo">
+
+                    <img
+                        class="portada"
+                        data-set="plus2"
+                        src="fotos/plus-set2/1.jpg"
+                        alt="Ver fotografías y videos del Plus Set 2"
+                    >
+
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Plus%20Set%202,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
+
+                </div>
+
+
+                <!-- FULL SET -->
+                <div class="item-catalogo">
+
+                    <img
+                        class="portada"
+                        data-set="full"
+                        src="fotos/full-set/1.jpg"
+                        alt="Ver fotografías y videos del Full Set"
+                    >
+
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/595994485841?text=Hola,%20me%20interesa%20el%20Full%20Set,%20m%C3%A1s%20info."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- FIN GRID CATÁLOGO -->
 
         </div>
-<div class="footer-credito">
-    © 2026 Lukkah Sound • Página Web Desarrollada por Lucas González
-</div>
-</footer> 
+        <!-- FIN CONTENIDO CATÁLOGO -->
+
+    </section>
+
+
+    <!-- VISOR DE FOTOS Y VIDEOS DEL CATÁLOGO -->
+    <div class="lightbox" id="lightbox">
+
+        <span class="close" aria-label="Cerrar galería">&times;</span>
+
+        <button class="prev" type="button" aria-label="Imagen o video anterior">
+            &#10094;
+        </button>
+
+        <img id="lightbox-img" alt="Contenido del set seleccionado">
+
+        <video
+            id="lightbox-video"
+            controls
+            playsinline
+            style="display: none;"
+        ></video>
+
+        <button class="next" type="button" aria-label="Imagen o video siguiente">
+            &#10095;
+        </button>
+
+        <!-- WHATSAPP DINÁMICO -->
+        <a
+            id="lightbox-whatsapp"
+            class="lightbox-wa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Consultar por WhatsApp
+        </a>
+
+    </div>
+
+
+    <!-- VISOR DE FOTOS DE EXPERIENCIA -->
+    <div class="lightbox-exp" id="lightbox-exp">
+
+        <span class="close-exp" aria-label="Cerrar galería">&times;</span>
+
+        <button class="prev-exp" type="button" aria-label="Foto anterior">
+            &#10094;
+        </button>
+
+        <img id="img-exp" alt="Fotografía de un evento de Lukkah Sound">
+
+        <button class="next-exp" type="button" aria-label="Foto siguiente">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- CONDICIONES DEL SERVICIO -->
+    <!-- CONDICIONES -->
+<section class="condiciones" id="condiciones">
+
+        <video class="condiciones-video" autoplay muted loop playsinline>
+            <source src="videos/fondostar.mp4" type="video/mp4">
+        </video>
+
+        <div class="condiciones-overlay"></div>
+
+        <div class="contenedor-condiciones">
+
+            <h2>CONDICIONES DEL SERVICIO</h2>
+
+            <div class="condicion-item">
+                TODOS LOS SETS PUEDEN SER MODIFICADOS A NECESIDAD DEL CLIENTE,
+                CON UN COSTO EXTRA.
+            </div>
+
+            <div class="condicion-item">
+                LAS HORAS DE SERVICIO PUEDEN VARIAR SEGÚN LA NECESIDAD DEL CLIENTE.
+            </div>
+
+            <div class="condicion-item">
+                TODOS LOS SETS INCLUYEN DJ PARA LA TOTALIDAD DE LA NOCHE.
+            </div>
+
+            <div class="condicion-item">
+                LA RESERVA DEL EVENTO SE CONFIRMA ÚNICAMENTE CON UNA SEÑA PREVIA
+                DEL 25% DEL COSTO TOTAL.
+            </div>
+
+            <div class="condicion-item">
+                EL RESTO DEL PAGO SE ENTREGA ANTES DE INICIAR EL EVENTO.
+            </div>
+
+            <div class="condicion-item">
+                EL SERVICIO INCLUYE TRANSPORTE, MONTAJE, DESMONTAJE Y RETIRO
+                DE LOS EQUIPOS.
+            </div>
+
+            <div class="condicion-item">
+                EN CASO DE CANCELACIÓN DEL EVENTO, LA SEÑA NO SERÁ REEMBOLSABLE.
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SOBRE LUKKAH SOUND -->
+<section class="sobre-lukkah" id="sobre-nosotros">
+
+    <div class="sobre-contenido">
+
+        <p class="sobre-etiqueta">CONOCENOS</p>
+
+        <h2>Sobre <span>Lukkah Sound</span></h2>
+
+        <p>
+            En Lukkah Sound creemos que cada evento merece sentirse especial.
+            Combinamos sonido, iluminación y música para crear una experiencia
+            que conecte con las personas y llene de energía cada momento.
+        </p>
+
+        <p>
+            Adaptamos nuestros sets a las necesidades de cada celebración,
+            acompañándote desde el montaje hasta el final de la fiesta.
+        </p>
+
+        <div class="sobre-detalles">
+            <span><i class="fa-solid fa-volume-high"></i> Sonido</span>
+            <span><i class="fa-solid fa-lightbulb"></i> Iluminación</span>
+            <span><i class="fa-solid fa-music"></i> DJ</span>
+        </div> 
+<a href="#contacto" class="sobre-boton">
+            Hablemos de tu evento
+        </a>
+
+    </div>
+
+</section>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer" id="contacto">
+
+        <div class="footer-contenido">
+
+            <h2>LUKKAH SOUND</h2>
+
+            <p>
+                Sonido • Iluminación • DJ Profesional
+            </p>
+
+            <p>
+                Estás a un clic de visitar nuestras redes sociales y contactarnos
+                para tu próximo evento. ¡Hacé clic en los íconos a continuación!
+            </p>
+
+            <!-- REDES SOCIALES -->
+            <div class="footer-redes">
+
+                <a
+                    href="https://wa.me/595994485841?text=Hola%20Lukkah,%20me%20gustaria%20un%20presupuesto%20acorde%20a%20mi%20evento:%0A%0A-%20Tipo%20de%20evento:%0A-%20Fecha%20y%20hora%20del%20evento:%0A-%20Ciudad%20donde%20se%20realizara:%0A-%20El%20lugar%20sera%20abierto%20o%20cerrado:%0A-%20Cantidad%20estimada%20de%20personas:"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon wa"
+                    aria-label="Contactar por WhatsApp"
+                >
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+
+                <a
+                    href="https://instagram.com/lukkahsound"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon ig"
+                    aria-label="Visitar Instagram de Lukkah Sound"
+                >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a
+                    href="https://facebook.com/lucas.gonzalez.680047"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon fb"
+                    aria-label="Visitar Facebook"
+                >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+
+                <a
+                    href="https://tiktok.com/@lukkahdj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon tt"
+                    aria-label="Visitar TikTok de DJ Lukkah"
+                >
+                    <i class="fab fa-tiktok" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="footer-info">
+
+                <p>📍 Asunción, Paraguay</p>
+
+                <p>
+                    📞 <a href="tel:+595994485841">+595 994 485 841</a>
+                </p>
+
+                <p>
+                    <a href="mailto:lukkahsound@gmail.com?subject=Presupuesto%20para%20evento&body=Hola%20Lukkah,%20me%20gustar%C3%ADa%20un%20presupuesto%20acorde%20a%20mi%20evento:%0A%0A-%20Tipo%20de%20evento:%0A-%20Fecha%20y%20hora%20del%20evento:%0A-%20Ciudad:%0A-%20Lugar:%0A-%20Cantidad%20de%20personas:">
+                        ✉️ lukkahsound@gmail.com
+                    </a>
+                </p>
+
+                <p>Disponible para eventos sociales y corporativos</p>
+
+            </div>
+
+            <div class="footer-credito">
+                © 2026 Lukkah Sound • Página Web Desarrollada por Lucas González
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 
