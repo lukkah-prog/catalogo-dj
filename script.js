@@ -535,12 +535,12 @@ videosExperiencias.forEach(video => {
 const videosPorEvento = {
     evento1: [
         "videos/evento1/xvstar.mp4",
-        "videos/evento1/xvstarr.mov"
+        "videos/evento1/xvstarr.MOV"
     ],
 
     evento2: [
         "videos/evento2/tiroteo.mp4",
-        "videos/evento2/tiroteo2.mov"
+        "videos/evento2/tiroteo2.MOV"
     ],
 
     evento3: [
