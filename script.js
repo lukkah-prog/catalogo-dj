@@ -99,7 +99,7 @@ const data = {
         "fotos/normal-set/2.jpg",
         "fotos/basic-set/7.JPEG",
         "fotos/basic-set/6.jpeg",
-        "videos/basic-set/video4.mp4",
+        "videos/normal-set/video4.mp4",
         "videos/normal-set/video2.mp4",
         "fotos/normal-set/5.jpeg",
         "videos/normal-set/video3.mp4"
