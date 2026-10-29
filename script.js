@@ -549,8 +549,8 @@ const videosPorEvento = {
     ],
 
     evento4: [
-        "videos/evento4/16a.mov",
-        "videos/evento4/16aa.mov"
+        "videos/evento4/16a.MOV",
+        "videos/evento4/16aa.MOV"
     ]
 };
 
