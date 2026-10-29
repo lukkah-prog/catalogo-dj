@@ -1495,3 +1495,9 @@ a {
         scroll-behavior: auto;
     }
 }
+/* Fondo oscuro uniforme */
+.experiencia-evento,
+.catalogo-seccion,
+.condiciones {
+    background: #080808;
+}
